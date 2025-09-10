@@ -3,3 +3,9 @@ repos:
     rev: v0.12.12
     hooks:
       - id: ruff-format
+  - repo: https://github.com/pre-commit/mirrors-clang-format
+    rev: v21.1.0
+    hooks:
+      - id: clang-format
+        types_or: [text]
+        files: \.glsl$
