@@ -1,4 +1,3 @@
-from typing import Optional
 
 import moderngl_window as mglw
 from top_level.global_context import GlobalCtx

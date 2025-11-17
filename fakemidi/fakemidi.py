@@ -1,7 +1,6 @@
 import json
 import platform
 from abc import ABC, abstractmethod
-from enum import Enum
 from functools import reduce, partial
 from typing import Callable, Dict, List, NamedTuple, Tuple
 
