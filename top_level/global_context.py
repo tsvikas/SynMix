@@ -15,6 +15,7 @@ class GlobalCtx:
     """
     Singleton object that holds global context shared across the application
     """
+
     _instance = None
     _initialized = False
 
@@ -33,4 +34,3 @@ class GlobalCtx:
 
     def reset_time_params(self):
         self.time_params = DEFAULT_TIME_PARAMS
-
