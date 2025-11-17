@@ -12,7 +12,8 @@ MIDI_INPUT_SUBNAME = "Mixage"
 
 
 if __name__ == "__main__":
-    # Parse command line arguments (use parse_known_args to allow moderngl_window's args to pass through)
+    # Parse command line arguments
+    # (use parse_known_args to allow moderngl_window's args to pass through)
     parser = argparse.ArgumentParser(
         description="SynMix - Audio visualizer with MIDI control", add_help=False
     )
@@ -38,7 +39,7 @@ if __name__ == "__main__":
     input_subname = fake_midi.output_name if fake_midi else MIDI_INPUT_SUBNAME
     input_manager = MidiInputManager(input_subname)
 
-    # Update sys.argv to remove our custom arguments so moderngl_window can parse its own
+    # remove our custom arguments so moderngl_window can parse its own
     sys.argv = [sys.argv[0]] + remaining
 
     # Entry point: Create window and start the main rendering loop

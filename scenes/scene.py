@@ -80,7 +80,11 @@ class Scene:
         self.vertex_shader_filename = vertex_shader_filename
 
     def __repr__(self):
-        return f"Scene({self.name}: shaders=[{self.fragment_shader_filename},{self.vertex_shader_filename}], params:{[p for p in self.params]})"
+        return (
+            f"Scene({self.name}: "
+            f"shaders=[{self.fragment_shader_filename},{self.vertex_shader_filename}],"
+            f" params:{[p for p in self.params]})"
+        )
 
     def __str__(self):
         return self.__repr__()

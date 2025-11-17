@@ -187,7 +187,8 @@ def load_key_map(file_path: str) -> dict[int, Callable]:
     {
         <key1>: (<method to generate message for key1 press>, None),
         <key2>: (<method to generate message for key2 press>, None),
-        <key3>: (<method to generate message for key3 press>, <method to generate message for key3 release>),
+        <key3>: (<method to generate message for key3 press>,
+                 <method to generate message for key3 release>),
         ...
     }
     """
@@ -200,7 +201,8 @@ def load_key_map(file_path: str) -> dict[int, Callable]:
         keys_messages_methods = interface.keys_messages_methods()
         if len(mapping["keys"]) != len(keys_messages_methods):
             raise ValueError(
-                f"Number of keys does not match number of message methods for button '{button_name}'"
+                "Number of keys does not match number of message methods "
+                f"for button '{button_name}'"
             )
 
         for key, methods in zip(mapping["keys"], keys_messages_methods, strict=True):

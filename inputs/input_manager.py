@@ -47,7 +47,9 @@ class MidiInputManager:
 
                 except StopIteration as err:
                     raise ValueError(
-                        f"No MIDI input found with subname: {input_subname=} in {mido.get_input_names()}. You may want to use --fakemidi"
+                        "No MIDI input found with subname: "
+                        f"{input_subname=} in {mido.get_input_names()}. "
+                        "You may want to use --fakemidi"
                     ) from err
 
             self._initialized = True

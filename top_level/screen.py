@@ -1,4 +1,3 @@
-
 import moderngl_window as mglw
 
 from inputs.input_manager import MidiInputManager
@@ -7,7 +6,8 @@ from top_level.global_context import GlobalCtx
 
 
 class Screen(mglw.WindowConfig):
-    """Main application window - handles core window management and delegates rendering to scenes"""
+    """Main application window.
+    Handles core window management and delegates rendering to scenes"""
 
     # OpenGL configuration
     gl_version = (3, 3)

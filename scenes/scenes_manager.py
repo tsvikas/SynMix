@@ -119,7 +119,8 @@ class ScenesManager:
         if abuttom.button_type not in supported_button_types:
             supported_names = ", ".join(bt.name for bt in supported_button_types)
             raise ValueError(
-                f"Controller '{controller_type}' supports button types {{{supported_names}}}, "
+                f"Controller '{controller_type}' "
+                f"supports button types {{{supported_names}}}, "
                 f"but button '{abuttom.name}' is of type {abuttom.button_type.name}."
             )
 
