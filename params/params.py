@@ -22,5 +22,5 @@ class Param:
             and not self.controller.is_persistent
         )
 
-    def control_param(self, value: int | float):
+    def control_param(self, value: float):
         self.controller.control_value(value)
