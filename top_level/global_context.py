@@ -1,4 +1,4 @@
-from typing import NamedTuple, Optional
+from typing import NamedTuple
 
 from fakemidi.fakemidi import FakeMidi
 
@@ -27,8 +27,8 @@ class GlobalCtx:
     def __init__(self):
         # Only initialize if it's the first time
         if not GlobalCtx._initialized:
-            self.fake_midi: Optional[FakeMidi] = None
-            self.starting_scene_name: Optional[str] = None
+            self.fake_midi: FakeMidi | None = None
+            self.starting_scene_name: str | None = None
             self.time_params: TimeParams = DEFAULT_TIME_PARAMS
             GlobalCtx._initialized = True
 

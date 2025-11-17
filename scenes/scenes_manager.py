@@ -1,6 +1,5 @@
 import tomllib
 import json
-from typing import Tuple
 import random
 from pprint import pprint
 
@@ -234,7 +233,7 @@ class ScenesManager:
         self.quad.render(self.post_prog)
 
     def _update_params(
-        self, time: float, frame_time: float, resolution: Tuple[float, float, float]
+        self, time: float, frame_time: float, resolution: tuple[float, float, float]
     ):
         """
         Update shader uniforms with current parameter values for first pass
@@ -260,7 +259,7 @@ class ScenesManager:
         self.current_scene.update_shader_params(self.current_prog)
 
     def _update_post_params(
-        self, time: float, frame_time: float, resolution: Tuple[float, float, float]
+        self, time: float, frame_time: float, resolution: tuple[float, float, float]
     ):
         """
         Update shader uniforms with current parameter values for second pass

@@ -1,4 +1,3 @@
-from typing import List, Tuple
 from pathlib import Path
 
 from params.params import Param
@@ -72,7 +71,7 @@ class Scene:
     def __init__(
         self,
         name: str,
-        params: List[Param],
+        params: list[Param],
         fragment_shader_filename: str,
         vertex_shader_filename: str = "vertex.glsl",
     ):
@@ -87,7 +86,7 @@ class Scene:
     def __str__(self):
         return self.__repr__()
 
-    def get_shaders(self) -> Tuple[str, str]:
+    def get_shaders(self) -> tuple[str, str]:
         """
         Load and return shader source code from files
 

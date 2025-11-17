@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 from random import uniform
 from threading import Timer
-from typing import Any, Callable, Dict, Iterable, Tuple
+from typing import Any
+from collections.abc import Callable, Iterable
 
 from inputs.buttons import ButtonType
 from inputs.midi import (
@@ -14,8 +15,8 @@ from inputs.midi import (
 )
 
 
-controllers_registry: Dict[
-    str, Tuple[type["ValueController"], frozenset[ButtonType]]
+controllers_registry: dict[
+    str, tuple[type["ValueController"], frozenset[ButtonType]]
 ] = {}
 
 
@@ -89,7 +90,7 @@ class NormalizedController(ValueController):
 
 @register_controller("LinearSegmentedController", ButtonType.KNOB)
 class LinearSegmentedController(ValueController):
-    def __init__(self, segments_points: Iterable[Tuple[float, float]], **kwargs):
+    def __init__(self, segments_points: Iterable[tuple[float, float]], **kwargs):
         super().__init__(**kwargs)
         self.segments_points = sorted(segments_points, key=lambda point: point[0])
         self.num_segments = len(self.segments_points) - 1
