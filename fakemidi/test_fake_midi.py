@@ -8,9 +8,7 @@ import moderngl_window as mglw
 from pyglet.window import key as pyglet_key
 
 # Add parent directory to path so we can import from utils, inputs, etc.
-script_dir = Path(__file__).resolve().parent
-project_root = script_dir.parent
-sys.path.insert(0, str(project_root))
+sys.path.insert(0, Path(__file__).resolve().parents[1].as_posix())
 
 from fakemidi.fakemidi import FakeMidi
 
