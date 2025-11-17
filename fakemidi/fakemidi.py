@@ -191,7 +191,7 @@ def load_key_map(file_path: str) -> dict[int, Callable]:
         ...
     }
     """
-    with open(file_path, "r") as f:
+    with open(file_path) as f:
         config = json.load(f)
     key_map = {}
     for button_name, mapping in config.items():
