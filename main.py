@@ -40,7 +40,7 @@ if __name__ == "__main__":
     input_manager = MidiInputManager(input_subname)
 
     # remove our custom arguments so moderngl_window can parse its own
-    sys.argv = [sys.argv[0]] + remaining
+    sys.argv = [sys.argv[0], *remaining]
 
     # Entry point: Create window and start the main rendering loop
     mglw.run_window_config(Screen)

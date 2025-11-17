@@ -1,6 +1,7 @@
-from typing import NamedTuple
+from typing import TYPE_CHECKING, NamedTuple
 
-from fakemidi.fakemidi import FakeMidi
+if TYPE_CHECKING:
+    from fakemidi.fakemidi import FakeMidi
 
 
 class TimeParams(NamedTuple):

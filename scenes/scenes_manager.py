@@ -27,7 +27,7 @@ TIME_SPEED_HOLD_INTERVAL = 0.15
 
 
 class ScenesManager:
-    def __init__(self, screen_ctx, starting_scene_name: str = None):
+    def __init__(self, screen_ctx, starting_scene_name: str | None = None):
         self.scenes = []
         self.input_manager = MidiInputManager()
         self.screen_ctx = screen_ctx

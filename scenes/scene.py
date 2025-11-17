@@ -83,7 +83,7 @@ class Scene:
         return (
             f"Scene({self.name}: "
             f"shaders=[{self.fragment_shader_filename},{self.vertex_shader_filename}],"
-            f" params:{[p for p in self.params]})"
+            f" params:{list(self.params)})"
         )
 
     def __str__(self):
