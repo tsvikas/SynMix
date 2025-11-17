@@ -2,7 +2,6 @@ from pathlib import Path
 
 from params.params import Param
 
-
 SHADERS_DIR = Path("resources") / "shaders"
 
 

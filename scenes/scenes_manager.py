@@ -1,10 +1,11 @@
-import tomllib
 import json
 import random
+import tomllib
+from pathlib import Path
 from pprint import pprint
 
 import moderngl_window as mglw
-from pathlib import Path
+
 from inputs.buttons import Button
 from inputs.input_manager import MidiInputManager
 from inputs.midi import MIDI_BUTTEN_CLICK, MIDI_DEC_VALUE, MIDI_INC_VALUE
@@ -12,7 +13,6 @@ from params.params import Param
 from params.valuecontrollers import controllers_registry
 from scenes.scene import Scene, update_shader_params_from_list
 from top_level.global_context import DEFAULT_TIME_PARAMS, GlobalCtx, TimeParams
-
 
 RESOURCES_DIR = Path("resources")
 SCENES_DIR = RESOURCES_DIR / "scenes"

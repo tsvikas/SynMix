@@ -1,8 +1,9 @@
 
 import moderngl_window as mglw
-from top_level.global_context import GlobalCtx
-from scenes.scenes_manager import ScenesManager
+
 from inputs.input_manager import MidiInputManager
+from scenes.scenes_manager import ScenesManager
+from top_level.global_context import GlobalCtx
 
 
 class Screen(mglw.WindowConfig):

@@ -1,25 +1,24 @@
 import json
 import platform
 from abc import ABC, abstractmethod
-from functools import reduce, partial
-from typing import NamedTuple
 from collections.abc import Callable
+from functools import partial, reduce
+from typing import NamedTuple
 
 import mido
 from pyglet.window import key as pyglet_key
 
 from inputs.buttons import Button, ButtonType
 from inputs.midi import (
-    get_midi_event_descriptor,
+    MAX_PITCH,
     MIDI_DEC_VALUE,
-    MidiEventType,
     MIDI_INC_VALUE,
     MIDI_MAX_VALUE,
     MIDI_MIN_VALUE,
-    MAX_PITCH,
     MIN_PITCH,
+    MidiEventType,
+    get_midi_event_descriptor,
 )
-
 
 PITCH_STEP_FACTOR = 64
 

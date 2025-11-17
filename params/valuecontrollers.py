@@ -1,19 +1,18 @@
 from abc import ABC, abstractmethod
+from collections.abc import Callable, Iterable
 from random import uniform
 from threading import Timer
 from typing import Any
-from collections.abc import Callable, Iterable
 
 from inputs.buttons import ButtonType
 from inputs.midi import (
+    MAX_PITCH,
     MIDI_DEC_VALUE,
     MIDI_INC_VALUE,
     MIDI_MAX_VALUE,
     MIDI_MIN_VALUE,
-    MAX_PITCH,
     MIN_PITCH,
 )
-
 
 controllers_registry: dict[
     str, tuple[type["ValueController"], frozenset[ButtonType]]
